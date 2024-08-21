@@ -143,4 +143,4 @@ Java fornece uma rica API para manipulação de I/O através dos pacotes `java.i
 
 ### Atividade✍
 
-De posse dos conhecimentos de I/O em java, utilize tais conceitos para criar uma aplicação que receba os dados do usuário e crie uma planilha de excel(.xls), onde recebe no mínimo três colunas do usuário e `N linhas` de dados, respectivos a quantidade de colunas informadas, ao final criar o arquivo da planilha.
+De posse dos conhecimentos de I/O em java, utilize tais conceitos para criar uma aplicação que receba os dados do usuário e crie uma planilha de excel(.csv), onde recebe no mínimo três colunas do usuário e `N linhas` de dados, respectivos a quantidade de colunas informadas, ao final criar o arquivo da planilha.
