@@ -1,6 +1,7 @@
 package src.primeirob.primeiraatv;
 
 import java.io.FileWriter;
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -12,9 +13,9 @@ public class JReader {
         try {
             int index = 0;
 
-            while (true) {//Falta coisa ainda espertão, mas isso já te ajuda
+            while (true) {// Falta coisa ainda espertão, mas isso já te ajuda
                 Scanner input = new Scanner(System.in);
-                
+
                 System.out.print("Insira " + (index + 1) + "º coluna: ");
                 String column = input.next();
 
@@ -33,8 +34,17 @@ public class JReader {
                 }
             }
 
-            FileWriter writer = new FileWriter("exemplo_bala.csv");
-            String content = "";
+            File myCSV = new File("exemplo_bala.csv");
+            boolean alreadyExistFile = myCSV.exists() && myCSV.canWrite();
+            FileWriter writer = null;
+
+            if (alreadyExistFile) {
+                writer = new FileWriter(myCSV, true);
+            } else {
+                writer = new FileWriter("exemplo_bala.csv");
+            }
+
+            String content = alreadyExistFile ? "\n\n" : "";
 
             for (String str : columns) {
                 if (str != null) {
