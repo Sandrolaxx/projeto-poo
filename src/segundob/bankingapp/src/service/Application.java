@@ -29,6 +29,7 @@ public class Application {
                     }
                     break;
                 case 3:
+                    gui.showExitMessage();
                     return;
             }
         }

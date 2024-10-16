@@ -26,7 +26,6 @@ public class ConsoleUI implements IUserInterface {
         System.out.println("[1] Gerar QR Code PIX");
         System.out.println("[2] Consultar boleto");
         System.out.println("[3] Realizar pagamento boleto");
-        System.out.println("[4] Realizar pagamento boleto");
 
         return inpuScanner.nextInt();
     }
@@ -45,10 +44,12 @@ public class ConsoleUI implements IUserInterface {
 
     @Override
     public void showErrorMsg(String msg) {
+        //Apresentar mensagem de erro
     }
-
+    
     @Override
     public void showExitMessage() {
+        //Apresentar mensagem ao selecionar sair da aplicação
     }
 
 }
