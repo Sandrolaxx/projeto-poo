@@ -1,23 +1,13 @@
 package com.fag;
 
-import com.fag.infra.console.ConsoleUI;
-import com.fag.infra.postgres.PostgresConnection;
-import com.fag.infra.testdb.UserTestDBRepository;
-import com.fag.service.Application;
+import com.fag.domain.repositories.IUserInterface;
+import com.fag.infra.console.ConsoleUserInterface;
+import com.fag.infra.swing.SwingUserInterface;
 
 public class Main {
-
     public static void main(String[] args) {
-
-        Application app = new Application();
-
-        PostgresConnection.getInstance();
-
-        ConsoleUI consoleUI = new ConsoleUI();
-        UserTestDBRepository userRepo = new UserTestDBRepository();
-
-        app.execute(consoleUI, userRepo);
-
+        ConsoleUserInterface consoleUI = new ConsoleUserInterface();
+        SwingUserInterface swing = new SwingUserInterface();
     }
 
 }

@@ -14,7 +14,7 @@ public class UserAccountDTO {
 
     private String accountNumber;
 
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
     private LocalDateTime disabledAt;
 
@@ -50,12 +50,20 @@ public class UserAccountDTO {
         this.email = email;
     }
 
-    public LocalDateTime getCreateAt() {
-        return createAt;
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public void setCreateAt(LocalDateTime createAt) {
-        this.createAt = createAt;
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
     public LocalDateTime getDisabledAt() {
@@ -64,14 +72,6 @@ public class UserAccountDTO {
 
     public void setDisabledAt(LocalDateTime disabledAt) {
         this.disabledAt = disabledAt;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
     }
 
 }
